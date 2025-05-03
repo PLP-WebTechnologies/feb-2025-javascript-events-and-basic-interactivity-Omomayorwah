@@ -1,0 +1,222 @@
+/* Google fonts - poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* General Reset */
+
+* {
+    font-family: poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    align-content: space-evenly;
+    flex-wrap: wrap;
+} 
+
+.header{
+width: 90%;
+margin: 2% auto;
+text-align: center;
+background-color: bisque;
+padding: 2%;
+font-weight: lighter;
+color: brown;
+}
+
+.header h1{
+    font-size: 2rem;
+}
+.nav {
+    margin-top: 2%;
+    background-color: bisque;
+}
+
+.nav a {
+    color: chocolate;
+    margin-left: 3%;
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+} 
+
+.main {
+    display: flex;
+    width: 90%;
+}
+ .aside {
+    width: 30%;
+    text-align: center;
+    margin-right: 1%;
+    background-color: lightgreen;
+}
+
+.aside img {
+    display: none;
+    width: 100%;
+    height: auto;
+    margin-top: 2%;
+}
+.slider {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+img.displaySlide {
+    display: block;
+    animation-name: fade;
+    animation-duration: 1s;
+}
+.slider button {
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.prev {
+    left: 0;
+}
+.next {
+    right: 0;
+}
+@keyframes fade {
+    from { opacity: -50%; }
+    to { opacity: 100%; }
+}
+.aside h2 {
+    font-size: 1.2rem;
+    margin-top: 2%;
+    padding: 1%;
+    font-weight: bold;
+}
+.newsletter {
+    display: inline;
+    width: 90%;
+    margin: 1% auto;
+    padding: 1%;
+}
+.newsletter label {
+    text-align: left;
+    margin-top: 2%;
+    font-weight: bold;
+}
+#email{
+    border-radius: 5px;
+    border: none;
+}
+#Subscribe {
+    padding: 2%;
+    margin-top: 2%;
+    background-color: rgb(38, 114, 38);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(5, 5, 5, 0.5);
+}
+
+#more {
+    padding: 1%;
+    margin-top: 1%;
+    background-color: rgb(38, 114, 38);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(5, 5, 5, 0.5);
+}
+
+.content {
+    width: 70%;
+    height: auto;
+}
+.home, .about, .contact {
+    width: 100%;
+    background-color: darkgray;
+} 
+
+.home h2, .about h2, .contact h2 {
+    padding: 1% 2%;
+    font-size: 1.2rem;
+}
+
+.home p, .about p, .contact p {
+    padding: 1% 2%;
+    }
+
+footer {
+    width: 90%;
+    margin: 2% auto;
+    text-align: center;
+    background-color:aquamarine;
+    padding: 2%;
+}
+
+@media  (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        width: 100%;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main {
+        flex-direction: column;
+        width: 100%;
+    }
+    .aside {
+        width: 100%;
+        margin-right: 0;
+    }
+    .content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5rem; /* Adjust header font size for smaller screens */
+    }
+    .nav a {
+        font-size: medium; /* Adjust navigation link size */
+    }
+    .aside h2 {
+        font-size: 1rem; /* Adjust aside heading size */
+    }
+    #Subscribe, #more {
+        padding: 1%; /* Reduce button padding for smaller screens */
+    }
+    footer {
+        font-size: 0.9rem; /* Adjust footer text size */
+    }
+}
+
+
+a:focus, button:focus {
+    outline: 2px solid blue; /* Add focus outline for better accessibility */
+    outline-offset: 2px;
+}
+
+#Subscribe:hover, #more:hover {
+    background-color: rgb(28, 84, 28); /* Darken button background on hover */
+    box-shadow: 0 0 8px rgba(5, 5, 5, 0.7); /* Enhance hover shadow effect */
+}
+
+button, a {
+    transition: all 0.3s ease; /* Add smooth transition for hover and focus states */
+}
